@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+branches:
+  only:
+  - master
+
 before_install:
   - docker build -t misterq/react-test -f ./client/Dockerfile.dev ./client
 
